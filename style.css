@@ -30,7 +30,7 @@ h2{
     padding: 5px;
 }
 
-.input{
+.inputBtn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +42,11 @@ h2{
     margin-bottom: 10px;
     font-size: 28px;
     font-weight: bold;
+}
+
+input {
+    text-align: center;
+    border: none;
 }
 
 button {
