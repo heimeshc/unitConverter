@@ -30,7 +30,7 @@ h2{
     padding: 5px;
 }
 
-.inputBtn{
+#inputBtn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,10 +72,20 @@ button {
 .card{
     background-color: FFFFFF;
     color: #6f6f71;
-    height: 60px;
     border-radius: 6px;
     padding: 10px;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #6f6f71;
+}
+
+footer{
+    color: #6944FF;
+    margin-top: 30px;
+    text-align: center;
 }
 
 @media (max-width: 1000px){
@@ -88,4 +98,11 @@ button {
     .main-container{
         min-width: 70%;
     }
+}
+
+button:hover {color: rgb(20, 20, 20)}
+
+button:active {
+  box-shadow: 2px 2px #666;
+  transform: translateY(1px);
 }

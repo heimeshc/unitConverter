@@ -1,22 +1,40 @@
 const btn = document.querySelector(".btn")
-let inputValue = document.querySelector(".inputBtn").value
+const length = document.querySelector(".length")
+const volume = document.querySelector(".volume")
+const mass = document.querySelector(".mass")
+const inputValue = document.getElementById("inputBtn")
 
 
-let num = 0;
 
-baseStr = `${num} Meters = ${x} Feet | ${num} Feet = ${x} Meters`
+
+
+btn.addEventListener("click",() => {
+    meterAndFeet();
+    literToGallon();
+    kilogramsToPounds();
+    console.log(inputValue)
+})
 
 function meterAndFeet(){
-    const meter = inputValue / 3.28;
-    const feet = inputValue * 3.28;
+    let num = inputValue.value
+    const meter = num / 3.28;
+    const feet = num * 3.28;
+    let resultOne = `${num} Meters = ${feet} Feet | ${num} Feet = ${meter.toFixed(2)} Meters`
+    length.textContent = resultOne
 }
 
 function literToGallon(){
-    const liters = inputValue * 3.785;
-    const gallons = inputValue / 3.785;
+    let num = inputValue.value
+    const liters = num * 3.785;
+    const gallons = num / 3.785;
+    let resultTwo = `${num} Liters = ${gallons.toFixed(2)} Feet | ${num} Gallons = ${liters} Liters`
+    volume.textContent = resultTwo
 }
 
 function kilogramsToPounds(){
-    const kilograms = inputValue / 2.205;
-    const pounds = inputValue * 2.205;
+    let num = inputValue.value
+    const kilograms = num / 2.205;
+    const pounds = num * 2.205;
+    let resultThree = `${num} Kilograms = ${pounds} pounds | ${num} Pounds = ${kilograms.toFixed(2)} Kilograms`
+    mass.textContent = resultThree
 }
